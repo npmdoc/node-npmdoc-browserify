@@ -1,11 +1,13 @@
-# api documentation for  [browserify (v14.1.0)](https://github.com/substack/node-browserify#readme)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-browserify.svg)](https://travis-ci.org/npmdoc/node-npmdoc-browserify)
+# api documentation for  [browserify (v14.1.0)](https://github.com/substack/node-browserify#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-browserify.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-browserify) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-browserify.svg)](https://travis-ci.org/npmdoc/node-npmdoc-browserify)
 #### browser-side require() the node way
 
 [![NPM](https://nodei.co/npm/browserify.png?downloads=true)](https://www.npmjs.com/package/browserify)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-browserify/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-browserify_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-browserify/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-browserify/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-browserify_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-browserify/build..beta..travis-ci.org/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-browserify/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-browserify/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-browserify/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
