@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.browserify.browserify">
+            function <span class="apidocSignatureSpan"></span>browserify
+            <span class="apidocSignatureSpan">(files, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.browserify.super_">
             function <span class="apidocSignatureSpan">browserify.</span>super_
             <span class="apidocSignatureSpan">()</span>
@@ -76,6 +85,84 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browserify" id="apidoc.module.browserify">module browserify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.browserify.browserify" id="apidoc.element.browserify.browserify">
+        function <span class="apidocSignatureSpan"></span>browserify
+        <span class="apidocSignatureSpan">(files, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Browserify(files, opts) {
+    var self = this;
+    if (!(this instanceof Browserify)) return new Browserify(files, opts);
+    if (!opts) opts = {};
+
+    if (typeof files === &#x27;string&#x27; || isArray(files) || isStream(files)) {
+        opts = xtend(opts, { entries: [].concat(opts.entries || [], files) });
+    }
+    else opts = xtend(files, opts);
+
+    self._options = opts;
+    if (opts.noparse) opts.noParse = opts.noparse;
+
+    if (opts.basedir !== undefined &#x26;&#x26; typeof opts.basedir !== &#x27;string&#x27;) {
+        throw new Error(&#x27;opts.basedir must be either undefined or a string.&#x27;);
+    }
+
+    opts.dedupe = opts.dedupe === false ? false : true;
+
+    self._external = [];
+    self._exclude = [];
+    self._ignore = [];
+    self._expose = {};
+    self._hashes = {};
+    self._pending = 0;
+    self._transformOrder = 0;
+    self._transformPending = 0;
+    self._transforms = [];
+    self._entryOrder = 0;
+    self._ticked = false;
+    self._bresolve = opts.browserField === false
+        ? function (id, opts, cb) {
+            if (!opts.basedir) opts.basedir = path.dirname(opts.filename)
+            resolve(id, opts, cb)
+        }
+        : bresolve
+    ;
+    self._syntaxCache = {};
+
+    var ignoreTransform = [].concat(opts.ignoreTransform).filter(Boolean);
+    self._filterTransform = function (tr) {
+        if (isArray(tr)) {
+            return ignoreTransform.indexOf(tr[0]) === -1;
+        }
+        return ignoreTransform.indexOf(tr) === -1;
+    };
+
+    self.pipeline = self._createPipeline(opts);
+
+    [].concat(opts.transform).filter(Boolean).filter(self._filterTransform)
+    .forEach(function (tr) {
+        self.transform(tr);
+    });
+
+    [].concat(opts.entries).filter(Boolean).forEach(function (file) {
+        self.add(file, { basedir: opts.basedir });
+    });
+
+    [].concat(opts.require).filter(Boolean).forEach(function (file) {
+        self.require(file, { basedir: opts.basedir });
+    });
+
+    [].concat(opts.plugin).filter(Boolean).forEach(function (p) {
+        self.plugin(p, { basedir: opts.basedir });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
