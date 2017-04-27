@@ -1,6 +1,6 @@
 # npmdoc-browserify
 
-#### api documentation for  [browserify (v14.3.0)](https://github.com/substack/node-browserify#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-browserify.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-browserify) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-browserify.svg)](https://travis-ci.org/npmdoc/node-npmdoc-browserify)
+#### basic api documentation for  [browserify (v14.3.0)](https://github.com/substack/node-browserify#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-browserify.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-browserify) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-browserify.svg)](https://travis-ci.org/npmdoc/node-npmdoc-browserify)
 
 #### browser-side require() the node way
 
